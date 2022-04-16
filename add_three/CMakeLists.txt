@@ -6,7 +6,7 @@ find_package(add_two REQUIRED)
 
 add_library(${PROJECT_NAME} add.cpp include/add_three.h)
 
-target_link_libraries(${PROJECT_NAME} PUBLIC add_two::add_two)
+target_link_libraries(${PROJECT_NAME} PUBLIC add_two)
 
 target_include_directories(${PROJECT_NAME} PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
@@ -22,6 +22,6 @@ install(TARGETS ${PROJECT_NAME}
     RUNTIME DESTINATION bin)
 
 install(EXPORT ${PROJECT_NAME}-targets
-    NAMESPACE ${PROJECT_NAME}::
+    # NAMESPACE ${PROJECT_NAME}::
     FILE ${PROJECT_NAME}-config.cmake
     DESTINATION lib/cmake/${PROJECT_NAME})

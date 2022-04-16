@@ -17,6 +17,6 @@ install(TARGETS ${PROJECT_NAME}
     RUNTIME DESTINATION bin)
 
 install(EXPORT ${PROJECT_NAME}-targets
-    NAMESPACE ${PROJECT_NAME}::
+    # NAMESPACE ${PROJECT_NAME}::
     FILE ${PROJECT_NAME}-config.cmake
     DESTINATION lib/cmake/${PROJECT_NAME})

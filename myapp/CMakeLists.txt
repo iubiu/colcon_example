@@ -2,9 +2,10 @@ project(myapp)
 cmake_minimum_required(VERSION 2.8)
 
 find_package(add_three REQUIRED)
+find_package(add_two REQUIRED)
 
 add_executable(${PROJECT_NAME} app.cpp)
-target_link_libraries(${PROJECT_NAME} add_three::add_three add_two::add_two)
+target_link_libraries(${PROJECT_NAME} add_three add_two)
 
 install(TARGETS ${PROJECT_NAME}
     EXPORT ${PROJECT_NAME}-targets
