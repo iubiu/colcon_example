@@ -10,7 +10,7 @@ colcon （collective construction）是为 ROS2 开发的构建工具，是 catk
 文档地址：https://colcon.readthedocs.io/en/released/
 
 # 一个简单的例子
-本例中有三个纯 CMake 包，add_three 依赖 add_two，myapp 依赖 add_three，使用colcon build 即可完成编译，注意，只有 ament_make 的包才能导出到 ROS2。 
+本例中有三个纯 CMake 包，add_three 依赖 add_two，myapp 依赖 add_three，使用 colcon build 即可完成编译，注意，只有 ament_make 的包才能导出到 ROS2。 
 
 # 常用的选项
 ## 指定生成文件路径
@@ -33,8 +33,9 @@ colcon build --packages-select pkg1 pkg2 pkg3
 ## 其他有用的参数
 --metas  src
 可以一次指定多个包的编译参数，可见 repo 中的 colcon.meta
+
 注意：未指定 meta 文件时，默认为 src/colcon.meta
 ### 每个包特定的 CMake 参数
 在每个包根目录编写 colcon.pkg 可以指定特定的包参数
 ### 忽略某个目录
-目录中含有 COLCON_IGNORE 文件的目录不会被 colcon 编译
+含有 COLCON_IGNORE 文件的目录不会被 colcon 编译
