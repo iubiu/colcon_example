@@ -1,7 +1,12 @@
 # colcon-example
 edit by StackEdit Online: https://stackedit.io/
-colcon （collective construction）是为 ROS2 开发的构建工具，是 catkin_make、ament tools 迭代版本，不仅支持 ament_make 构建的包，还支持纯 cmake 的包。实现原理是遍历目录下的 CMakeLists.txt，针对每个包设置 CMAKE_INSTALL_PREFIX、CMAKE_PREFIX_PATH 等环境变量以实现在每个包可以用 find_package() 等 Module CMake 的功能，实现模块的解耦。
+
+colcon （collective construction）是为 ROS2 开发的构建工具，是 catkin_make、ament tools 迭代版本，不仅支持 ament_make 构建的包，还支持纯 cmake 的包。
+
+实现原理是遍历目录下的 CMakeLists.txt，针对每个包设置 CMAKE_INSTALL_PREFIX、CMAKE_PREFIX_PATH 等环境变量以实现在每个包可以用 find_package() 等 Module CMake 的功能，实现模块的解耦。
+
 注意：纯 CMake 的包无需 package.xml 文件，复杂的依赖关系需要注意编译顺序，可能需要分次执行 colcon 避免依赖的包还未生成，但是 ament_make 的包可以通过 package.xml 实现依赖管理。
+
 文档地址：https://colcon.readthedocs.io/en/released/
 
 # 一个简单的例子
