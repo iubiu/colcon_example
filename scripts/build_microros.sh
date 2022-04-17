@@ -1,4 +1,6 @@
 #!/bin/bash
+touch uros/micro-ROS-demos/COLCON_IGNORE
+
 colcon --log-base out/log build --build-base out/build --install-base out/install --packages-up-to rosidl_typesupport_microxrcedds_c --metas ./ --cmake-args -DBUILD_TESTING=OFF -DBUILD_SHARED_LIBS=ON $@
 colcon --log-base out/log build --build-base out/build --install-base out/install --packages-up-to rosidl_typesupport_microxrcedds_cpp --metas ./ --cmake-args -DBUILD_TESTING=OFF -DBUILD_SHARED_LIBS=ON $@
 
