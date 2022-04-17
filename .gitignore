@@ -2,3 +2,6 @@ out/*
 build/*
 install/*
 log/*
+ros2/*
+uros/*
+eProsima/*
