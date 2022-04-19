@@ -1,1 +1,1 @@
-colcon graph --dot | dot -Tpng -o out/add.png
+colcon --log-base out/log graph --dot | dot -Tpng -o out/add.png
